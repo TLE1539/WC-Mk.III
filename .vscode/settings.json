@@ -1,0 +1,16 @@
+{
+    "arduino.path": "D:/DevApps/Arduino",
+    "arduino.ignoreBoards": [
+
+    ],
+    "arduino.additionalUrls": [
+    
+    ],
+    "arduino.logLevel": "info",
+    "arduino.enableUSBDetection": true,
+    "arduino.disableTestingOpen": false,
+    "arduino.skipHeaderProvider": false,
+    //"arduino.defaultBaudRate": 115200,
+    "workbench.colorTheme":"Solarized Light",
+    "C_Cpp.intelliSenseEngine": "Default"
+}

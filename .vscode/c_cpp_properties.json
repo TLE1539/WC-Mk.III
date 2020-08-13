@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:\\DevApps\\Arduino\\tools\\**",
+                "D:\\DevApps\\Arduino\\hardware\\arduino\\avr\\**",
+                "D:\\DevApps\\Arduino\\hardware\\tools\\**",
+                "D:\\DevApps\\Arduino\\libraries\\**",
+                "D:\\Documents\\repo-vscode\\**",
+                "D:\\DevApps\\Arduino\\hardware\\tools\\avr\\lib/gcc\\avr\\5.4.0\\include",
+                "D:\\DevApps\\Arduino\\hardware\\arduino\\avr\\cores\\arduino",
+                "D:\\DevApps\\Arduino/hardware\\arduino\\avr\\variants\\standard",
+                "D:\\DevApps\\Arduino"
+            ],
+            "forcedInclude": [
+                "D:\\DevApps\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "D:\\DevApps\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+                ]
+            },
+            "intelliSenseMode": "msvc-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USBCON"
+            ]
+        }
+    ],
+    "version": 4
+}
