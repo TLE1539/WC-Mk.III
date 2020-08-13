@@ -82,25 +82,33 @@ in the datasheet
 
 Equations are calculated from dcode.fr/equation-finder
 
-Accurate within +- 0.1C from -20C to 40C
+Accurate within +- 0.1C from -40C to 40C
 */
 static double resistanceToTemperature(double resistance){
   double t = 0.0;
   double r = resistance / 1000000; // For simplified convertion process
   if (r <= 0.33320808){
-    // covers 15C to 40C within +- 0.1C
+    // covers 40C to 15C
+    // table values: -25 to 30
     t = (-496.824 * pow(r, 11)) + (5047.59 * pow(r, 10)) - (22183.3 * pow(r, 9))
       + (55779.1 * pow(r, 8)) - (89449.5 * pow(r, 7)) + (96536.8 * pow(r, 6))
       - (72101.2 * pow(r, 5)) + (37738.9 * pow(r, 4)) - (13875.9 * pow(r, 3))
       + (3580.8 * pow(r, 2)) - (672.143 * r) + 87.0692;
   }
   
-  else{
-    // covers -20C to 15C within +- 0.1C
+  else if (r <= 1.0445345 && r > 0.33320808){
+    // covers 15C to -10C
     t = (-0.125514 * pow(r, 11)) + (2.83242 * pow(r, 10)) - (27.343 * pow(r, 9))
       + (149.323 * pow(r, 8)) - (514.217 * pow(r, 7)) + (1178.43 * pow(r, 6))
       - (1848.56 * pow(r, 5)) + (2010.73 * pow(r, 4)) - (1520.96 * pow(r, 3))
       + (800.012 * pow(r, 2)) - (303.851 * r) + 65.2518;
+  }
+  
+  else{
+    // covers -10C to -40C
+    // table values: -40 to -10
+    t = (0.0176519 * pow(r,6)) - (.354364 * pow(r, 5)) + (2.92849 * pow(r, 4)) - (13.033 * pow(r, 3))
+      + (34.5617 * pow(r, 2)) - (59.8321 * r) + 27.2221;
   }
   
   return t;
